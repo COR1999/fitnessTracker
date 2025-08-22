@@ -27,6 +27,8 @@ const Chart = () => {
   const calories = exerciseData.map(item => item.calories);
   const durationMinutes = exerciseData.map(item => item.durationMinutes);
 
+
+  // Chart options 
   const options = {
     title: {
       text: 'Fitness Tracker - Exercise Progress',
@@ -112,9 +114,9 @@ const Chart = () => {
   };
 
   return (
-    <div className="w-full mx-auto">
+    <div className="chart-container" data-testid="highchart-container">
       <div 
-        className="w-full h-80 sm:h-88 md:h-96 lg:h-116"
+        className="chart-responsive"
         style={{ padding: '8px' }}
       >
         <HighchartsReact

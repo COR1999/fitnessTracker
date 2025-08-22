@@ -33,3 +33,13 @@ test.describe("Home page", () =>{
 
 
 })
+
+
+
+// Chart Tests
+test('highchart renders with data', async ({ page }) => {
+    // Wait for HighCharts container
+    await expect(page.locator('[data-testid="highchart-container"]')).toBeVisible();
+
+    
+  });
