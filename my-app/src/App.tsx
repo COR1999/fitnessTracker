@@ -24,23 +24,23 @@ function App() {
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-5xl font-bold text-gray-800 mb-4">
+          <div className="text-center mb-6">
+            <h1 className="text-3xl font-bold text-gray-800 mb-3">
               Welcome to Your Fitness Journey
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Track your workouts, monitor your progress, and achieve your fitness goals with our comprehensive dashboard.
             </p>
           </div>
 
           {/* Stats Overview Card */}
-          <div className="mb-8">
-            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 backdrop-blur-sm bg-white/90">
+          <div className="mb-6">
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 backdrop-blur-sm bg-white/90">
               <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Workout Overview</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-5 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-sm text-blue-700 font-semibold uppercase tracking-wide">Total Sessions</p>
@@ -49,7 +49,7 @@ function App() {
                     <div className="text-3xl">🏃‍♂️</div>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200 hover:shadow-lg transition-all duration-300">
+                <div className="bg-gradient-to-br from-green-50 to-green-100 p-5 rounded-xl border border-green-200 hover:shadow-lg transition-all duration-300">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-sm text-green-700 font-semibold uppercase tracking-wide">This Week</p>
@@ -58,7 +58,7 @@ function App() {
                     <div className="text-3xl">📅</div>
                   </div>
                 </div>
-                <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200 hover:shadow-lg transition-all duration-300">
+                <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-5 rounded-xl border border-purple-200 hover:shadow-lg transition-all duration-300">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-sm text-purple-700 font-semibold uppercase tracking-wide">Best Day</p>
@@ -131,8 +131,8 @@ function App() {
           )}
 
           {/* Chart Section */}
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 backdrop-blur-sm bg-white/95">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Progress Chart</h2>
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-4 backdrop-blur-sm bg-white/95">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Progress Chart</h2>
             <Chart />
           </div>
         </div>
