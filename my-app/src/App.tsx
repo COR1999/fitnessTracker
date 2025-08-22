@@ -27,7 +27,7 @@ function App() {
       <main className="container mx-auto px-4 py-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-800 mb-3">
+            <h1  className="text-3xl font-bold text-gray-800 mb-3">
               Welcome to Your Fitness Journey
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -73,7 +73,7 @@ function App() {
 
           {/* Add Workout Button */}
           <div className="mb-8 flex justify-center">
-            <button 
+            <button name="Add Workout"
               onClick={() => setShowAddForm(!showAddForm)}
               className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
@@ -86,7 +86,7 @@ function App() {
             <div className="mb-8 flex justify-center">
               <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 max-w-md w-full backdrop-blur-sm bg-white/95">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Add New Workout</h3>
-                <form onSubmit={handleAddWorkout} className="space-y-6">
+                <form name="workout form" onSubmit={handleAddWorkout} className="space-y-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Date</label>
                     <input 
