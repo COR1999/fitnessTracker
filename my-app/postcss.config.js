@@ -4,3 +4,4 @@ export default {
     autoprefixer: {},
   },
 }
+// Needed to fix tailwind error

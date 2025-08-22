@@ -31,8 +31,6 @@ function App() {
       calories: parseInt(formData.get('calories') as string),
       durationMinutes: parseInt(formData.get('duration') as string),
     }
-    let totalSession = newWorkout["date"].length;
-    console.log(totalSession);
 
     // Don't save anywhere, just show success message
     setWorkouts([...workouts, newWorkout])
