@@ -1,8 +1,21 @@
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { exerciseData } from '../../constants.ts';
+import { useState, useEffect } from 'react';
 
 const Chart = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
   // Format dates for display
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -72,9 +85,9 @@ const Chart = () => {
       opposite: true
     }],
     legend: {
-      layout: 'vertical',
-      align: 'right',
-      verticalAlign: 'middle',
+      layout: isMobile ? 'horizontal' : 'vertical',
+      align: isMobile ? 'center' : 'right',
+      verticalAlign: isMobile ? 'bottom' : 'middle',
       itemStyle: {
         color: '#05668d'
       }
@@ -101,7 +114,7 @@ const Chart = () => {
   return (
     <div className="w-full mx-auto">
       <div 
-        className="w-full h-64 sm:h-72 md:h-80 lg:h-96"
+        className="w-full h-80 sm:h-88 md:h-96 lg:h-116"
         style={{ padding: '8px' }}
       >
         <HighchartsReact
