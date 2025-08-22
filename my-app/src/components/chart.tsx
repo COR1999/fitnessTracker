@@ -1,6 +1,6 @@
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import exerciseData from '../../exerciseData.json';
+import { exerciseData } from '../../constants.ts';
 
 const Chart = () => {
   // Format dates for display
