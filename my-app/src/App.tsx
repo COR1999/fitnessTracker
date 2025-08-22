@@ -1,10 +1,27 @@
 import Chart from './components/chart'
 import './App.css'
 import { useState } from 'react'
+import { exerciseData } from '../constants'
 
 function App() {
   const [showAddForm, setShowAddForm] = useState(false)
   const [workouts, setWorkouts] = useState([])
+  
+  // Get the number of objects in exerciseData
+  const totalSessions = exerciseData.length
+  
+  // Calculate this week's sessions (2025-08-01 to 2025-08-05)
+  const weekStart = new Date('2025-08-01')
+  const weekEnd = new Date('2025-08-05')
+  const thisWeekSessions = exerciseData.filter(workout => {
+    const workoutDate = new Date(workout.date)
+    return workoutDate >= weekStart && workoutDate <= weekEnd
+  }).length
+  
+  // Find the best day (highest calories)
+  const bestDay = exerciseData.reduce((best, current) => {
+    return current.calories > best.calories ? current : best
+  }, exerciseData[0])?.calories || 0
 
   const handleAddWorkout = (e: React.FormEvent) => {
     e.preventDefault()
@@ -14,7 +31,9 @@ function App() {
       calories: parseInt(formData.get('calories') as string),
       durationMinutes: parseInt(formData.get('duration') as string),
     }
-    
+    let totalSession = newWorkout["date"].length;
+    console.log(totalSession);
+
     // Don't save anywhere, just show success message
     setWorkouts([...workouts, newWorkout])
     setShowAddForm(false)
@@ -44,7 +63,7 @@ function App() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-sm text-blue-700 font-semibold uppercase tracking-wide">Total Sessions</p>
-                      <p className="text-3xl font-bold text-blue-900 mt-2">12</p>
+                      <p className="text-3xl font-bold text-blue-900 mt-2">{totalSessions}</p>
                     </div>
                     <div className="text-3xl">🏃‍♂️</div>
                   </div>
@@ -53,7 +72,7 @@ function App() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-sm text-green-700 font-semibold uppercase tracking-wide">This Week</p>
-                      <p className="text-3xl font-bold text-green-900 mt-2">4</p>
+                      <p className="text-3xl font-bold text-green-900 mt-2">{thisWeekSessions}</p>
                     </div>
                     <div className="text-3xl">📅</div>
                   </div>
@@ -62,7 +81,7 @@ function App() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-sm text-purple-700 font-semibold uppercase tracking-wide">Best Day</p>
-                      <p className="text-3xl font-bold text-purple-900 mt-2">450cal</p>
+                      <p className="text-3xl font-bold text-purple-900 mt-2">{bestDay}cal</p>
                     </div>
                     <div className="text-3xl">🔥</div>
                   </div>
