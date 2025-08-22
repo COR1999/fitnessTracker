@@ -6,23 +6,30 @@ test.describe("Home page", () =>{
 
   test.beforeEach(async ({ page }) => {
     // Visit page
-    await page.goto("http://localhost:5174/")
+    await page.goto("http://localhost:5173/")
   })
   
   test("Should have correct metadata and elements", async ({page}) =>{
-    
+
     // Check title has loaded
     await expect(page).toHaveTitle("Fitness Tracker");
-
+    // Check the Wellcome text has loaded
     await page.getByText("Welcome to Your Fitness Journey");
-
-
   })
 
-  test("Should make sure that all buttons work correct", async ({page}) => {
-    await page.getByRole('button', { name: "Add Workout" } ).click();
-    await expect(page.getByRole("form", { name: "workout form"} ));
+  test('form appears after button click', async ({ page }) => {
+
+    // Ensure form is initially hidden (optional)
+    await expect(page.locator('[data-testid="workout-form"]')).toBeHidden();
     
-  })
+    // Click the button that should show the form
+    await page.click('[data-testid="workout-button"]');
+    
+    // Verify the form is now visible
+    await expect(page.locator('[data-testid="workout-form"]')).toBeVisible();
+    // Click the Submit workout button to Submit form
+    await page.click('[data-testid="submit-button"]');
+  });
+
 
 })

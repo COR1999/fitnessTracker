@@ -73,7 +73,7 @@ function App() {
 
           {/* Add Workout Button */}
           <div className="mb-8 flex justify-center">
-            <button name="Add Workout"
+            <button data-testid="workout-button"
               onClick={() => setShowAddForm(!showAddForm)}
               className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
@@ -84,9 +84,9 @@ function App() {
           {/* Add Workout Form */}
           {showAddForm && (
             <div className="mb-8 flex justify-center">
-              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 max-w-md w-full backdrop-blur-sm bg-white/95">
+              <div data-testid="workout-form" className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 max-w-md w-full backdrop-blur-sm bg-white/95">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Add New Workout</h3>
-                <form name="workout form" onSubmit={handleAddWorkout} className="space-y-6">
+                <form onSubmit={handleAddWorkout} className="space-y-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Date</label>
                     <input 
@@ -119,7 +119,7 @@ function App() {
                       className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
                     />
                   </div>
-                  <button 
+                  <button data-testid="submit-button"
                     type="submit"
                     className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
