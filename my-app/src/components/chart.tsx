@@ -45,7 +45,7 @@ const Chart = () => {
       title: {
         text: 'Calories',
         style: {
-          color: '#02c39a'
+          color: '#3b82f6'
         }
       },
       labels: {
@@ -59,7 +59,7 @@ const Chart = () => {
       title: {
         text: 'Minutes',
         style: {
-          color: '#028090'
+          color: '#8b5cf6'
         }
       },
       labels: {
@@ -83,30 +83,23 @@ const Chart = () => {
       name: 'Calories Burned',
       data: calories,
       yAxis: 0,
-      color: '#02c39a'
+      color: '#3b82f6'
     }, {
       name: 'Duration (Minutes)',
       data: durationMinutes,
       yAxis: 1,
-      color: '#028090'
+      color: '#8b5cf6'
     }],
     credits: {
       enabled: false
     },
     chart: {
-      backgroundColor: '#f0f3bd'
+      backgroundColor: 'transparent'
     }
   };
 
   return (
-    <div 
-      className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto p-3 sm:p-4 md:p-6 rounded-lg shadow-lg border-2"
-      style={{ 
-        backgroundColor: 'var(--persian-green)',
-        borderColor: 'var(--teal)',
-        minHeight: '300px'
-      }}
-    >
+    <div className="w-full mx-auto">
       <div 
         className="w-full h-64 sm:h-72 md:h-80 lg:h-96"
         style={{ padding: '8px' }}

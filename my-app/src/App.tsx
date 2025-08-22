@@ -1,6 +1,4 @@
 import Chart from './components/chart'
-import Header from './components/Header'
-import Footer from './components/Footer'
 import './App.css'
 import { useState } from 'react'
 
@@ -21,11 +19,11 @@ function App() {
     setWorkouts([...workouts, newWorkout])
     setShowAddForm(false)
     ;(e.target as HTMLFormElement).reset()
-    alert('Workout added to database pending approval!')
+    // Log to console to show that work out could be added to database
+    console.log("Workout added to database pending approval!")
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Header />
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -139,7 +137,6 @@ function App() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
