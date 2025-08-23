@@ -6,7 +6,7 @@ test.describe("Home page", () =>{
 
   test.beforeEach(async ({ page }) => {
     // Visit page
-    await page.goto("http://localhost:5173/")
+    await page.goto("http://localhost:5174/")
   })
   
   test("Should have correct metadata and elements", async ({page}) =>{
@@ -30,16 +30,16 @@ test.describe("Home page", () =>{
     // Click the Submit workout button to Submit form
     await page.click('[data-testid="submit-button"]');
   });
+  // Chart Tests
+  test('highchart renders with data', async ({ page }) => {
+    // Wait for HighCharts container
+    await expect(page.locator('[data-testid="highchart-container"]')).toBeVisible();
 
+
+  });
 
 })
 
 
 
-// Chart Tests
-test('highchart renders with data', async ({ page }) => {
-    // Wait for HighCharts container
-    await expect(page.locator('[data-testid="highchart-container"]')).toBeVisible();
 
-    
-  });
