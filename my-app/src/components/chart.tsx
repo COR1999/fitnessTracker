@@ -114,16 +114,19 @@ const Chart = () => {
   };
 
   return (
-    <div className="chart-container" data-testid="highchart-container">
-      <div 
-        className="chart-responsive"
-        style={{ padding: '8px' }}
-      >
-        <HighchartsReact
-          highcharts={Highcharts}
-          options={options}
-          containerProps={{ style: { width: '100%', height: '100%' } }}
-        />
+    <div className="card" style={{padding: '1rem'}}>
+      <h2 className="heading-secondary mb-4">Progress Chart</h2>
+      <div className="chart-container" data-testid="highchart-container">
+        <div 
+          className="chart-responsive"
+          style={{ padding: '8px' }}
+        >
+          <HighchartsReact
+            highcharts={Highcharts}
+            options={options}
+            containerProps={{ style: { width: '100%', height: '100%' } }}
+          />
+        </div>
       </div>
     </div>
   );

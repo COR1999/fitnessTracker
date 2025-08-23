@@ -6,7 +6,7 @@ test.describe("Home page", () =>{
 
   test.beforeEach(async ({ page }) => {
     // Visit page
-    await page.goto("http://localhost:5174/")
+    await page.goto("http://localhost:5173/")
   })
   
   test("Should have correct metadata and elements", async ({page}) =>{
