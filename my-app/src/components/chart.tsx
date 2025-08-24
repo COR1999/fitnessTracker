@@ -2,6 +2,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { exerciseData } from '../../constants.ts';
 import { useState, useEffect } from 'react';
+import { getChartOptions } from '../chartConfig.ts';
 
 const Chart = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -27,91 +28,8 @@ const Chart = () => {
   const calories = exerciseData.map(item => item.calories);
   const durationMinutes = exerciseData.map(item => item.durationMinutes);
 
-
-  // Chart options 
-  const options = {
-    title: {
-      text: 'Fitness Tracker - Exercise Progress',
-      style: {
-        color: '#001a1d'
-      }
-    },
-    subtitle: {
-      text: 'Daily calories burned and workout duration',
-      style: {
-        color: '#05668d'
-      }
-    },
-    xAxis: {
-      categories: dates,
-      title: {
-        text: 'Date',
-        style: {
-          color: '#05668d'
-        }
-      },
-      labels: {
-        style: {
-          color: '#05668d'
-        }
-      }
-    },
-    yAxis: [{
-      title: {
-        text: 'Calories',
-        style: {
-          color: '#3b82f6'
-        }
-      },
-      labels: {
-        style: {
-          color: '#05668d'
-        }
-      },
-      tickInterval: 50,
-      min: 0
-    }, {
-      title: {
-        text: 'Minutes',
-        style: {
-          color: '#8b5cf6'
-        }
-      },
-      labels: {
-        style: {
-          color: '#05668d'
-        }
-      },
-      tickInterval: 10,
-      min: 0,
-      opposite: true
-    }],
-    legend: {
-      layout: isMobile ? 'horizontal' : 'vertical',
-      align: isMobile ? 'center' : 'right',
-      verticalAlign: isMobile ? 'bottom' : 'middle',
-      itemStyle: {
-        color: '#05668d'
-      }
-    },
-    series: [{
-      name: 'Calories Burned',
-      data: calories,
-      yAxis: 0,
-      color: '#3b82f6'
-    }, {
-      name: 'Duration (Minutes)',
-      data: durationMinutes,
-      yAxis: 1,
-      color: '#8b5cf6'
-    }],
-    credits: {
-      enabled: false
-    },
-    chart: {
-      backgroundColor: 'transparent'
-    }
-  };
+  // Get chart options from external config
+  const options = getChartOptions(dates, calories, durationMinutes, isMobile);
 
   return (
     <div className="card" style={{padding: '1rem'}}>
