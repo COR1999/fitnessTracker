@@ -1,22 +1,13 @@
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { exerciseData } from '../../constants.ts';
-import { useState, useEffect } from 'react';
 import { getChartOptions } from '../chartConfig.ts';
+import { useMobile } from '../hooks/checkIsMobile.ts';
 
 const Chart = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  // Check if its mobile
+  let isMobile = useMobile();
 
-  useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
-
-    return () => window.removeEventListener('resize', checkIsMobile);
-  }, []);
   // Format dates for display
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -34,10 +25,8 @@ const Chart = () => {
   return (
     <div className="card" style={{padding: '1rem'}}>
       <h2 className="heading-secondary mb-4">Progress Chart</h2>
-      <div className="chart-container" data-testid="highchart-container">
-        <div 
-          className="chart-responsive"
-          style={{ padding: '8px' }}
+      <div className="chart-container " data-testid="highchart-container">
+        <div className="chart-responsive"
         >
           <HighchartsReact
             highcharts={Highcharts}

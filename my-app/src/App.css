@@ -1,0 +1,16 @@
+.app-container {
+  padding-bottom: 2rem;
+}
+
+.chart-responsive {
+  padding: 8px;
+  width: 105%;
+  height: 105%;
+  margin: -2.5%;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding-bottom: 3rem;
+  }
+}

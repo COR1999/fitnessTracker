@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { handleAddWorkout } from "../hooks/formData.tsx"
+import { handleAddWorkout } from "../hooks/formData.ts"
 
 const AddWorkoutForm = () => { 
   const [showAddForm, setShowAddForm] = useState(false)
