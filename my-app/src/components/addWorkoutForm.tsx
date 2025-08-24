@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import { handleAddWorkout } from "../hooks/formData.ts"
+import { useWorkouts } from "../hooks/formData.ts"
 
 const AddWorkoutForm = () => { 
-  const [showAddForm, setShowAddForm] = useState(false)
+  const { showAddForm, setShowAddForm, handleAddWorkout } = useWorkouts();
 
   return (
     

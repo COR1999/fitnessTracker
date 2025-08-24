@@ -1,15 +1,6 @@
 import { exerciseData } from '../../constants.ts';
 import { useMemo } from 'react';
 
-// // What each workout looks like
-// type Workout = {
-//   date: string;
-//   calories: number;
-//   durationMinutes: number;
-//   [key: string]: any; // for other properties
-// };
-
-
 export const useFormatData = () => {
 
   const formattedData = useMemo(() => {

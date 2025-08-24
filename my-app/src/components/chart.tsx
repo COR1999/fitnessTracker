@@ -2,13 +2,13 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { getChartOptions } from '../chartConfig.ts';
 import { useMobile } from '../hooks/checkIsMobile.ts';
-
 import { useFormatData } from '../hooks/formatChart.ts';
 
 const Chart = () => {
   // Check if its mobile
   let isMobile = useMobile();
 
+  // Get the formatted Data 
   const { dates, calories, durationMinutes } = useFormatData();
   
   // Get chart options from external config
