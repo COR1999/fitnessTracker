@@ -13,7 +13,7 @@ export const useMobile = (breakpoint: number = 768): boolean => {
     }
     return false;
   });
-
+  
   useEffect(() => {
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth < breakpoint);
