@@ -1,24 +1,16 @@
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
-import { exerciseData } from '../../constants.ts';
 import { getChartOptions } from '../chartConfig.ts';
 import { useMobile } from '../hooks/checkIsMobile.ts';
+
+import { useFormatData } from '../hooks/formatChart.ts';
 
 const Chart = () => {
   // Check if its mobile
   let isMobile = useMobile();
 
-  // Format dates for display
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-  };
-
-  // Extract data for chart
-  const dates = exerciseData.map(item => formatDate(item.date));
-  const calories = exerciseData.map(item => item.calories);
-  const durationMinutes = exerciseData.map(item => item.durationMinutes);
-
+  const { dates, calories, durationMinutes } = useFormatData();
+  
   // Get chart options from external config
   const options = getChartOptions(dates, calories, durationMinutes, isMobile);
 

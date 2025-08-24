@@ -41,13 +41,11 @@ export const numberOfObjects = () => {
   return exerciseData.length;
 }
 
-
-
 export const getBestDay = () =>{
   // Find the best day (highest calories)
   const bestDay = exerciseData.reduce((best, current) => {
     return current.calories > best.calories ? current : best
   }, exerciseData[0])?.calories || 0
 
-  return(bestDay)
+  return bestDay;
 }
