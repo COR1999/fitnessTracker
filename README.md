@@ -1,31 +1,3 @@
-<!--  Write Readme explaing about the app. -->
-<!-- Picture of application -->
-<!-- Overview - See detailed section below -->
-<!-- Using application  -->
-<!-- UX -->
-<!-- Features -->
-<!-- Exitings functionality -->
-Thie application is a simple app that helps the user keep track of exercise progress and plots data points on a chart
-Ability to add new workouts
-Overview of all current workouts 
-<!-- Future Enhancements - See detailed section below -->
-<!-- Testing -->
-Playwright was used for E2E testing.
-Chart check that buttons on chart remove the aproperate plotted line.
-
-
-<!-- Use of AI - See detailed section below -->
-<!-- Known Issues - See detailed section below -->
-<!-- Deployment -->
-
-<!-- Technologies Used - See detailed section below -->
-
-<!-- Color Choice -->
-
-<!-- Content -->
-The data set was given by a 3rd party.
-<!--  -->
-
 # Fitness Tracker
 
 ![Fitness Tracker App](my-app/src/assets/Screenshot%202025-08-25%20014540.png)
