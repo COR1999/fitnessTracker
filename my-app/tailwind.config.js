@@ -110,6 +110,20 @@ export default {
         '.min-height-400': {
           'min-height': '400px',
         },
+        
+        // Header utilities
+        '.header-gradient': {
+          '@apply bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700': {},
+        },
+        '.header-icon-wrapper': {
+          '@apply bg-white/20 backdrop-blur-sm rounded-full p-4 mr-4 transition-transform duration-300 hover:scale-110': {},
+        },
+        '.header-title': {
+          '@apply text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-indigo-100 bg-clip-text text-transparent': {},
+        },
+        '.header-features': {
+          '@apply flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-white/80': {},
+        },
       }
       
       addUtilities(newUtilities)
