@@ -1,42 +1,4 @@
 import { exerciseData } from '../../constants'
-import { useMemo } from 'react';
-
-
-// What each workout looks like
-type Workout = {
-  date: string;
-  calories?: number;
-  duration?: number;
-  [key: string]: string | number | undefined; // for other properties
-};
-
-export const useStats = (
-  exerciseData: Workout[],
-  startDate: string = '2025-08-01',
-  endDate: string = '2025-08-05'
-) => {
-  const stats = useMemo(() => {
-    const dateStart = new Date(startDate);
-    const dateEnd = new Date(endDate);
-    
-    // Calculate sessions within the specified date range
-    const weekStart = dateStart;
-    const weekEnd = dateEnd;
-  
-    const thisWeekSessions = exerciseData.filter(workout => {
-      const workoutDate = new Date(workout.date);
-      return workoutDate >= weekStart && workoutDate <= weekEnd;
-    }).length;
-
-    return {
-      thisWeekSessions,
-      weekStart,
-      weekEnd
-    };
-  }, [exerciseData, startDate, endDate]);
-
-  return stats;
-};
 
 export const numberOfObjects = () => {
   // Get the number of objects in exerciseData

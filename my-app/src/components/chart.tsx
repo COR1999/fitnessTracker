@@ -19,7 +19,7 @@ const Chart = () => {
       <div className="chart-container" data-testid="highchart-container">
         <div className="chart-responsive">
           <HighchartsReact
-            highcharts={Highcharts}
+            highcharts={Highcharts}c
             options={options}
             containerProps={{ 
               style: { 

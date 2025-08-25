@@ -1,8 +1,7 @@
-import { getBestDay, useStats, numberOfObjects, getTotalHours } from '../hooks/handleStats'
-import { exerciseData } from '../../constants'
+import { getBestDay, numberOfObjects, getTotalHours } from '../hooks/handleStats'
+
 
 const StatsOverview = () => {
-  const stats = useStats(exerciseData);
   const totalSessions = numberOfObjects()
 
   return (
