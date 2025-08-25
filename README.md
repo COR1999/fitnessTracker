@@ -1,6 +1,6 @@
 <!--  Write Readme explaing about the app. -->
 <!-- Picture of application -->
-<!-- Overview -->
+<!-- Overview - See detailed section below -->
 <!-- Using application  -->
 <!-- UX -->
 <!-- Features -->
@@ -8,26 +8,17 @@
 Thie application is a simple app that helps the user keep track of exercise progress and plots data points on a chart
 Ability to add new workouts
 Overview of all current workouts 
-<!-- Future Enchancements -->
-Ability to connect to Google Health api and upload data from smart watches and mobile devices
+<!-- Future Enhancements - See detailed section below -->
 <!-- Testing -->
 Playwright was used for E2E testing.
 Chart check that buttons on chart remove the aproperate plotted line.
 
 
-<!-- Use of Ai -->
-In this project i used ai to assit me with implmentation of the charts
-In this project i used ai to assit me with UI
-In this proejct i used ai to help with the implamentation of Playwright
-<!-- Known Issues -->
+<!-- Use of AI - See detailed section below -->
+<!-- Known Issues - See detailed section below -->
 <!-- Deployment -->
 
-<!-- Technologies Used -->
-[Highcharts]"https://www.highcharts.com/" -- where used to deplay data from exerciseData.json to user 
-[React]
-[Tailwind]
-[Typescript]
-[Playwright] - Implamented by reading the doc and use of ai
+<!-- Technologies Used - See detailed section below -->
 
 <!-- Color Choice -->
 
@@ -41,6 +32,23 @@ The data set was given by a 3rd party.
 
 A modern fitness tracking web application built with React, TypeScript, and Tailwind CSS.
 
+## 📋 Overview
+
+**Transform your fitness journey with data-driven insights.** This modern fitness tracker combines simplicity with powerful analytics to help you stay motivated and reach your goals.
+
+### 🎯 What Makes This Special
+
+| 💪 **Smart Tracking** | 📊 **Visual Analytics** | 🚀 **User Experience** |
+|----------------------|-------------------------|------------------------|
+| Intuitive workout logging with detailed exercise data | Interactive charts powered by Highcharts for clear progress visualization | Clean, responsive design that works seamlessly across all devices |
+| Pre-loaded dataset for immediate exploration | Real-time data visualization with customizable chart views | Lightning-fast performance with modern React architecture |
+
+### ✨ Perfect For
+- **Fitness Enthusiasts** looking to visualize their progress
+- **Data Lovers** who want insights into their workout patterns  
+- **Goal-Oriented Athletes** tracking performance metrics
+- **Anyone** starting their fitness journey with data-driven motivation
+
 ## 🚀 Live Demo
 
 [View Live Application](https://fitness-tracker-bice-one.vercel.app/)
@@ -53,28 +61,43 @@ A modern fitness tracking web application built with React, TypeScript, and Tail
 - **Responsive Design**: Optimized for both desktop and mobile devices
 - **Performance Optimized**: Lazy loading and code splitting for fast load times
 
-## Tech Stack
+## 🛠️ Technologies Used
 
-- **Frontend**: React 19, TypeScript
-- **Styling**: Tailwind CSS
-- **Charts**: Highcharts
-- **Build Tool**: Vite
-- **Testing**: Playwright
-- **Deployment**: Vercel
+- **Frontend Framework**: React 19 with TypeScript
+- **Styling**: Tailwind CSS for responsive design
+- **Data Visualization**: Highcharts for interactive charts and graphs
+- **Build Tool**: Vite for fast development and optimized builds
+- **Testing Framework**: Playwright for comprehensive E2E testing
+- **Deployment Platform**: Vercel for seamless CI/CD
+- **Development Tools**: ESLint for code quality and consistency
+
+## 🤖 Use of AI
+
+This project leveraged AI assistance in several key areas:
+
+- **Chart Implementation**: AI was used to assist with the implementation and configuration of Highcharts for data visualization
+- **UI/UX Design**: AI helped optimize the user interface design and improve the overall user experience
+- **Testing Framework**: AI assisted with the implementation of Playwright testing framework, including reading documentation and setting up test cases
+- **Code Optimization**: AI was used to improve CSS reusability and modern gradient design implementations
 
 ## Getting Started
 
-1. **Install dependencies**
+1. **Navigate to the project directory**
+   ```bash
+   cd my-app
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. **Start development server**
+3. **Start development server**
    ```bash
    npm run dev
    ```
 
-3. **Open in browser**
+4. **Open in browser**
    Navigate to `http://localhost:5173`
 
 ## Available Scripts
@@ -158,10 +181,23 @@ npm run dev
 
 
 
+## ⚠️ Known Issues
+
+Currently, there are no major known issues with the application. However, here are some areas that could be improved:
+
+- **Data Persistence**: Workout data is currently stored locally and will be lost if browser data is cleared
+- **Chart Responsiveness**: Some chart elements may not be fully optimized for very small mobile screens
+- **Form Validation**: Basic form validation is implemented but could be enhanced with more comprehensive error handling
+- **Browser Compatibility**: While the app works on modern browsers, some features may not be fully supported on older browser versions
+
+If you encounter any issues not listed here, please feel free to report them.
+
 ## 🔮 Future Enhancements
 
 ### Data Management
+- **Google Fitness API Integration**: Connect to Google Health API to automatically sync workout data from smartphones and smartwatches
 - **Cloud Storage Integration**: Implement backend database to sync workouts across devices
+- **Wearable Device Support**: Integration with popular fitness trackers and smartwatches for automatic data collection
 - **Local Storage Optimization**: Enhanced local storage with better data structure and compression
 - **Export Functionality**: Allow users to export workout data as CSV/JSON files
 - **Import Workouts**: Support importing data from other fitness apps
@@ -194,3 +230,17 @@ npm run dev
 - **Unit Testing**: Comprehensive Jest/React Testing Library coverage
 - **CI/CD Pipeline**: Automated testing and deployment
 - **Error Boundary**: Better error handling and user feedback
+
+---
+
+## 🎨 Color Scheme
+
+![Color Palette](my-app/src/assets/color-palette.png)
+
+The application uses a carefully curated ocean-inspired color palette:
+
+- **Caribbean Current** (`#006D77`) - Deep teal for primary elements
+- **Tiffany Blue** (`#83C5BE`) - Light teal for secondary elements  
+- **Alice Blue** (`#EDF6F9`) - Very light blue for backgrounds
+- **Pale Dogwood** (`#FFDDD2`) - Light peach for soft accents
+- **Atomic Tangerine** (`#E29578`) - Warm orange for highlights

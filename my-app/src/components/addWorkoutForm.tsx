@@ -9,7 +9,7 @@ const AddWorkoutForm = () => {
         <div className="center-form">
           <button data-testid="workout-button"
           onClick={() => setShowAddForm(!showAddForm)}
-          className="btn-primary">
+          className={showAddForm ? "bg-atomic-tangerine hover:bg-atomic-tangerine/90 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" : "btn-primary"}>
           {showAddForm ? '✕ Cancel' : '+ Add Workout'}
           </button>
         </div>
@@ -53,8 +53,8 @@ const AddWorkoutForm = () => {
                   </div>
                   <button data-testid="submit-button"
                     type="submit"
-                    className="w-full btn-success">
-                    ✅ Add Workout
+                    className="w-full btn-primary">
+                    Add Workout
                   </button>
                 </form>
               </div>

@@ -6,7 +6,7 @@ import { useFormatData } from '../hooks/formatChart.ts';
 
 const Chart = () => {
   // Check if it's mobile
-  let isMobile = useMobile();
+  const isMobile = useMobile();
 
   // Get the formatted data 
   const { dates, calories, durationMinutes } = useFormatData();

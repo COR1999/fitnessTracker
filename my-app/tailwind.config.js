@@ -6,6 +6,13 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'caribbean-current': '#006d77',
+        'tiffany-blue': '#83c5be',
+        'alice-blue': '#edf6f9',
+        'pale-dogwood': '#ffddd2',
+        'atomic-tangerine': '#e29578',
+      },
       spacing: {
         '88': '22rem',
         '116': '29rem',
@@ -17,7 +24,7 @@ export default {
       const newUtilities = {
         // Container utilities
         '.app-container': {
-          '@apply min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100': {},
+          '@apply min-h-screen bg-gradient-to-br from-alice-blue to-tiffany-blue/30': {},
         },
         '.content-wrapper': {
           '@apply container mx-auto px-4 py-4': {},
@@ -28,7 +35,7 @@ export default {
         
         // Card utilities
         '.card': {
-          '@apply bg-white rounded-2xl shadow-xl border border-gray-100 backdrop-blur-sm bg-white/95': {},
+          '@apply bg-alice-blue/90 rounded-2xl shadow-xl border border-tiffany-blue/20 backdrop-blur-sm': {},
         },
         '.card-content': {
           '@apply p-6': {},
@@ -52,10 +59,10 @@ export default {
         
         // Button utilities
         '.btn-primary': {
-          '@apply bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105': {},
+          '@apply bg-gradient-to-r from-caribbean-current to-tiffany-blue hover:from-caribbean-current/90 hover:to-tiffany-blue/90 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105': {},
         },
         '.btn-success': {
-          '@apply bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105': {},
+          '@apply bg-gradient-to-r from-atomic-tangerine to-pale-dogwood hover:from-atomic-tangerine/90 hover:to-pale-dogwood/90 text-caribbean-current font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105': {},
         },
         
         // Stat card utilities
@@ -63,32 +70,32 @@ export default {
           '@apply p-5 rounded-xl border hover:shadow-lg transition-all duration-300': {},
         },
         '.stat-card-blue': {
-          '@apply bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200': {},
+          '@apply bg-gradient-to-br from-alice-blue to-tiffany-blue/20 border-tiffany-blue/30': {},
         },
         '.stat-card-green': {
-          '@apply bg-gradient-to-br from-green-50 to-green-100 border-green-200': {},
+          '@apply bg-gradient-to-br from-pale-dogwood/30 to-atomic-tangerine/20 border-atomic-tangerine/30': {},
         },
         '.stat-card-purple': {
-          '@apply bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200': {},
+          '@apply bg-gradient-to-br from-tiffany-blue/20 to-caribbean-current/10 border-caribbean-current/30': {},
         },
         
         // Form utilities
         '.form-input': {
-          '@apply w-full border-2 border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200': {},
+          '@apply w-full border-2 border-tiffany-blue/30 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-caribbean-current focus:border-transparent transition-all duration-200 bg-alice-blue/50': {},
         },
         '.form-label': {
-          '@apply block text-sm font-semibold text-gray-700 mb-2': {},
+          '@apply block text-sm font-semibold text-caribbean-current mb-2': {},
         },
         
         // Typography utilities
         '.heading-primary': {
-          '@apply text-3xl font-bold text-gray-800 mb-3': {},
+          '@apply text-3xl font-bold text-caribbean-current mb-3': {},
         },
         '.heading-secondary': {
-          '@apply text-2xl font-bold text-gray-800 mb-6 text-center': {},
+          '@apply text-2xl font-bold text-caribbean-current mb-6 text-center': {},
         },
         '.text-subtitle': {
-          '@apply text-xl text-gray-400 max-w-2xl mx-auto': {},
+          '@apply text-xl text-tiffany-blue/70 max-w-2xl mx-auto': {},
         },
         
         // Layout utilities
@@ -96,10 +103,10 @@ export default {
           '@apply flex items-center justify-center h-64': {},
         },
         '.loading-spinner': {
-          '@apply animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600': {},
+          '@apply animate-spin rounded-full h-8 w-8 border-b-2 border-caribbean-current': {},
         },
         '.loading-text': {
-          '@apply ml-3 text-gray-600': {},
+          '@apply ml-3 text-caribbean-current': {},
         },
         '.center-form': {
           '@apply mb-8 flex justify-center': {},
@@ -113,13 +120,13 @@ export default {
         
         // Header utilities
         '.header-gradient': {
-          '@apply bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700': {},
+          '@apply bg-gradient-to-br from-caribbean-current via-tiffany-blue to-atomic-tangerine': {},
         },
         '.header-icon-wrapper': {
           '@apply bg-white/20 backdrop-blur-sm rounded-full p-4 mr-4 transition-transform duration-300 hover:scale-110': {},
         },
         '.header-title': {
-          '@apply text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-indigo-100 bg-clip-text text-transparent': {},
+          '@apply text-4xl sm:text-5xl font-bold bg-gradient-to-r from-white via-alice-blue to-pale-dogwood bg-clip-text text-transparent': {},
         },
         '.header-features': {
           '@apply flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-white/80': {},

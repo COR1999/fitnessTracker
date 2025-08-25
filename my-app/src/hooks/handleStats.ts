@@ -5,7 +5,9 @@ import { useMemo } from 'react';
 // What each workout looks like
 type Workout = {
   date: string;
-  [key: string]: any; // for other properties
+  calories?: number;
+  duration?: number;
+  [key: string]: string | number | undefined; // for other properties
 };
 
 export const useStats = (

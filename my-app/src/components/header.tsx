@@ -12,7 +12,7 @@ const PageHead = () => {
               </h1>
             </div>
             
-            <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 max-w-3xl mx-auto mb-8 font-medium px-4">
+            <p className="text-lg sm:text-xl lg:text-2xl text-alice-blue/90 max-w-3xl mx-auto mb-8 font-medium px-4">
               Transform your fitness journey with smart tracking and insights
             </p>
             

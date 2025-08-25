@@ -1,8 +1,8 @@
 export const chartColors = {
-  primary: '#001a1d',
-  secondary: '#05668d',
-  accent1: '#3b82f6',
-  accent2: '#8b5cf6',
+  primary: '#006d77',        // caribbean-current (dark teal)
+  secondary: '#006d77',      // caribbean-current for better contrast
+  accent1: '#e29578',        // atomic-tangerine (orange - calories)
+  accent2: '#006d77',        // caribbean-current (dark teal - duration)
   transparent: 'transparent'
 };
 

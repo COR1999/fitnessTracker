@@ -6,40 +6,40 @@ const StatsOverview = () => {
   const totalSessions = numberOfObjects()
 
   return (
-  <div className="mb-6">
-    <div className="card card-content">
-      <h2 className="heading-secondary">Workout Overview</h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="stat-card stat-card-blue">
-        <div className="flex items-center justify-between">
-        <div>
-          <p className="text-sm text-blue-700 font-semibold uppercase tracking-wide">Total Sessions</p>
-          <p className="text-3xl font-bold text-blue-900 mt-2">{totalSessions}</p>
-        </div>
-        <div className="text-3xl">🏃‍♂️</div>
-        </div>
-        </div>
-        <div className="stat-card stat-card-green">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm text-green-700 font-semibold uppercase tracking-wide">Date Range</p>
-              <p className="text-3xl font-bold text-green-900 mt-2">{stats.thisWeekSessions}</p>
+    <div className="mb-8">
+      <div className="card card-content">
+        <h2 className="heading-secondary mb-8">Workout Overview</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="stat-card stat-card-blue hover:shadow-lg transition-shadow duration-200 cursor-pointer">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <p className="text-sm text-caribbean-current font-black uppercase tracking-wider mb-3 bg-caribbean-current/10 px-2 py-1 rounded-md inline-block">💪 Total Sessions</p>
+                <p className="text-4xl font-extrabold text-caribbean-current leading-none">{totalSessions}</p>
+              </div>
+              <div className="text-4xl ml-4 transform hover:scale-110 transition-transform duration-200">🏃‍♂️</div>
             </div>
-            <div className="text-3xl">📅</div>
           </div>
-        </div>
-        <div className="stat-card stat-card-purple">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm text-purple-700 font-semibold uppercase tracking-wide">Highest Calories</p>
-              <p className="text-3xl font-bold text-purple-900 mt-2">{getBestDay()}cal</p>
+          <div className="stat-card stat-card-green hover:shadow-lg transition-shadow duration-200 cursor-pointer">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <p className="text-sm text-atomic-tangerine font-black uppercase tracking-wider mb-3 bg-atomic-tangerine/10 px-2 py-1 rounded-md inline-block">📊 This Week</p>
+                <p className="text-4xl font-extrabold text-atomic-tangerine leading-none">{stats.thisWeekSessions}</p>
+              </div>
+              <div className="text-4xl ml-4 transform hover:scale-110 transition-transform duration-200">📅</div>
             </div>
-              <div className="text-3xl">🔥</div>
+          </div>
+          <div className="stat-card stat-card-purple hover:shadow-lg transition-shadow duration-200 cursor-pointer">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <p className="text-sm text-tiffany-blue font-black uppercase tracking-wider mb-3 bg-tiffany-blue/10 px-2 py-1 rounded-md inline-block">🏆 Highest Calories</p>
+                <p className="text-4xl font-extrabold text-tiffany-blue leading-none">{getBestDay()}cal</p>
+              </div>
+              <div className="text-4xl ml-4 transform hover:scale-110 transition-transform duration-200">🔥</div>
             </div>
           </div>
         </div>
       </div>
-  </div>
+    </div>
   )
 }
 
