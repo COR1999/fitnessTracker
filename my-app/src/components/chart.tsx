@@ -9,10 +9,10 @@ const Chart = () => {
   const isMobile = useMobile();
 
   // Get the formatted data 
-  const { dates, calories, durationMinutes } = useFormatData();
-  
+  const { dates, calories, stepsData } = useFormatData();
+  console.log(stepsData)
   // Get chart options from external config
-  const options = getChartOptions(dates, calories, durationMinutes, isMobile);
+  const options = getChartOptions(dates, calories, stepsData, isMobile);
 
   return (
     <div className="card card-content">

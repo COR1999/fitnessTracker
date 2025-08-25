@@ -9,7 +9,7 @@ export const chartColors = {
 export const getChartOptions = (
   dates: string[], 
   calories: number[], 
-  durationMinutes: number[], 
+  stepsData: number[], 
   isMobile: boolean
 ) => ({
   title: {
@@ -19,7 +19,7 @@ export const getChartOptions = (
     }
   },
   subtitle: {
-    text: 'Daily calories burned and workout duration',
+    text: 'Daily calories burned and steps taken',
     style: {
       color: chartColors.secondary
     }
@@ -38,11 +38,11 @@ export const getChartOptions = (
       }
     }
   },
-  yAxis: [{
+  yAxis: {
     title: {
-      text: 'Calories',
+      text: 'Calories/Steps',
       style: {
-        color: chartColors.accent1
+        color: chartColors.secondary
       }
     },
     labels: {
@@ -50,24 +50,8 @@ export const getChartOptions = (
         color: chartColors.secondary
       }
     },
-    tickInterval: 50,
     min: 0
-  }, {
-    title: {
-      text: 'Minutes',
-      style: {
-        color: chartColors.accent2
-      }
-    },
-    labels: {
-      style: {
-        color: chartColors.secondary
-      }
-    },
-    tickInterval: 10,
-    min: 0,
-    opposite: true
-  }],
+  },
   legend: {
     layout: isMobile ? 'horizontal' : 'vertical',
     align: isMobile ? 'center' : 'right',
@@ -79,12 +63,10 @@ export const getChartOptions = (
   series: [{
     name: 'Calories Burned',
     data: calories,
-    yAxis: 0,
     color: chartColors.accent1
   }, {
-    name: 'Duration (Minutes)',
-    data: durationMinutes,
-    yAxis: 1,
+    name: 'Steps Taken',
+    data: stepsData,
     color: chartColors.accent2
   }],
   credits: {

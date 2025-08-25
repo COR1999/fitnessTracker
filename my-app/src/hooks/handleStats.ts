@@ -51,3 +51,12 @@ export const getBestDay = () =>{
 
   return bestDay;
 }
+
+export const getTotalHours = () => {
+  // Calculate total hours spent training
+  const totalMinutes = exerciseData.reduce((total, workout) => {
+    return total + (workout.durationMinutes || 0);
+  }, 0);
+  
+  return Math.round((totalMinutes / 60) * 10) / 10; // Round to 1 decimal place
+}

@@ -1,4 +1,4 @@
-import { getBestDay, useStats, numberOfObjects } from '../hooks/handleStats'
+import { getBestDay, useStats, numberOfObjects, getTotalHours } from '../hooks/handleStats'
 import { exerciseData } from '../../constants'
 
 const StatsOverview = () => {
@@ -22,8 +22,8 @@ const StatsOverview = () => {
           <div className="stat-card stat-card-green hover:shadow-lg transition-shadow duration-200 cursor-pointer">
             <div className="flex items-center justify-between">
               <div className="flex-1">
-                <p className="text-sm text-atomic-tangerine font-black uppercase tracking-wider mb-3 bg-atomic-tangerine/10 px-2 py-1 rounded-md inline-block">📊 This Week</p>
-                <p className="text-4xl font-extrabold text-atomic-tangerine leading-none">{stats.thisWeekSessions}</p>
+                <p className="text-sm text-atomic-tangerine font-black uppercase tracking-wider mb-3 bg-atomic-tangerine/10 px-2 py-1 rounded-md inline-block">📊 Time Spent</p>
+                <p className="text-4xl font-extrabold text-atomic-tangerine leading-none">{getTotalHours()}h</p>
               </div>
               <div className="text-4xl ml-4 transform hover:scale-110 transition-transform duration-200">📅</div>
             </div>
