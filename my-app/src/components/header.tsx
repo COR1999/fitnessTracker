@@ -1,13 +1,13 @@
 const PageHead = () => { 
   return(
-      <div className="text-center mb-6">
-          <h1 className="heading-primary">
-            Welcome to Your Fitness Journey
+      <header className="text-center mb-6" style={{minHeight: '120px'}}>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3">
+            Fitness Tracker
           </h1>
-          <p className="text-subtitle">
-            Track your workouts, monitor your progress, and achieve your fitness goals with our comprehensive dashboard.
+          <p className="text-lg sm:text-xl text-gray-400 max-w-xl mx-auto">
+            Track workouts and monitor progress
           </p>
-      </div>
+      </header>
   )
 }
 

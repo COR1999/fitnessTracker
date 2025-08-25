@@ -13,4 +13,14 @@ export default defineConfig({
       deleteOriginFile: false
     })
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'highcharts-vendor': ['highcharts', 'highcharts-react-official'],
+          'react-vendor': ['react', 'react-dom']
+        }
+      }
+    }
+  }
 })

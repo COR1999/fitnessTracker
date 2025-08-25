@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Critical CSS - above the fold */
+@layer base {
+  body { 
+    margin: 0; 
+    font-family: system-ui, -apple-system, sans-serif; 
+  }
+
+  #root { 
+    min-height: 100vh; 
+  }
+}
