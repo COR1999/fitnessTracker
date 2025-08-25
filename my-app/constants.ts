@@ -8,4 +8,5 @@ export const exerciseData = [
 { "date": "2025-08-05", "calories": 500, "durationMinutes": 45 }
 ]
 
+export const stepsConst = 60;
 

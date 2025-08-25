@@ -10,7 +10,6 @@ const Chart = () => {
 
   // Get the formatted data 
   const { dates, calories, stepsData } = useFormatData();
-  console.log(stepsData)
   // Get chart options from external config
   const options = getChartOptions(dates, calories, stepsData, isMobile);
 

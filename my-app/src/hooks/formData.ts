@@ -1,11 +1,10 @@
-// import { Console } from 'console';
 import { useState } from 'react'
 
 // Define the workout type
 type Workout = {
 date: string;
 calories: number;
-stepsTaken: number;
+durationMinutes: number;
 };
 
 // Custom hook for managing workouts
@@ -17,15 +16,11 @@ export const useWorkouts = () => {
     e.preventDefault();
     
     const formData = new FormData(e.target as HTMLFormElement);
-    const rawSteps = parseInt(formData.get('duration') as string)
-    // const steps = parseInt(formData.get('duration') as string)
-    // console.log(steps);
     const newWorkout: Workout = {
       date: formData.get('date') as string,
       calories: parseInt(formData.get('calories') as string),
-      stepsTaken: calculateSteps(rawSteps),
+      durationMinutes: parseInt(formData.get('duration') as string),
     };
-
 
     // Add workout to state
     setWorkouts(prev => [...prev, newWorkout]); // ✅ Use callback for safer updates
@@ -40,10 +35,6 @@ export const useWorkouts = () => {
     workouts,
     showAddForm,
     setShowAddForm,
-    handleAddWorkout,
+    handleAddWorkout
   };
 };
-
-const calculateSteps = function(x:number) {
-  return (x * 60)
-}

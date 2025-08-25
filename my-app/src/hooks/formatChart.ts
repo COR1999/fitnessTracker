@@ -1,19 +1,13 @@
-import { exerciseData } from '../../constants.ts';
+import { exerciseData, stepsConst } from '../../constants.ts';
 import { useMemo } from 'react';
 
 export const useFormatData = () => {
 
   const formattedData = useMemo(() => {
-    // Format dates for display
-    const formatDate = (dateString: string) => {
-      const date = new Date(dateString);
-      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-    };
-
     // Extract data for chart
     const dates = exerciseData.map(item => item.date);
     const calories = exerciseData.map(item => item.calories);
-    const stepsData = exerciseData.map(item => calculateSteps(item.durationMinutes));
+    const stepsData = exerciseData.map(item => calculateSteps(item.durationMinutes, stepsConst));
     
     return {
       dates,
@@ -25,7 +19,6 @@ export const useFormatData = () => {
   return formattedData;
 }
 
-
-const calculateSteps = function(x:number) {
-  return (x * 60)
+const calculateSteps = function(x:number, y:number) {
+  return (x * y)
 }
