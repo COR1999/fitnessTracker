@@ -15,15 +15,20 @@ const Chart = () => {
   const options = getChartOptions(dates, calories, durationMinutes, isMobile);
 
   return (
-    <div className="card" style={{padding: '1rem'}}>
+    <div className="card card-content">
       <h2 className="heading-secondary mb-4">Progress Chart</h2>
-      <div className="chart-container " data-testid="highchart-container">
-        <div className="chart-responsive"
-        >
+      <div className="chart-container" data-testid="highchart-container">
+        <div className="chart-responsive">
           <HighchartsReact
             highcharts={Highcharts}
             options={options}
-            containerProps={{ style: { width: '100%', height: '100%' } }}
+            containerProps={{ 
+              style: { 
+                width: '100%', 
+                height: '100%',
+                minHeight: isMobile ? '300px' : '400px'
+              } 
+            }}
           />
         </div>
       </div>

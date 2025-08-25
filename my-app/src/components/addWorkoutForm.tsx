@@ -6,7 +6,7 @@ const AddWorkoutForm = () => {
   return (
     
       <div>
-        <div className="mb-8 flex justify-center">
+        <div className="center-form">
           <button data-testid="workout-button"
           onClick={() => setShowAddForm(!showAddForm)}
           className="btn-primary">
@@ -15,7 +15,7 @@ const AddWorkoutForm = () => {
         </div>
         
         {showAddForm && (
-            <div className="mb-8 flex justify-center">
+            <div className="center-form">
               <div data-testid="workout-form" className="card card-form">
                 <h3 className="heading-secondary">Add New Workout</h3>
                 <form onSubmit={handleAddWorkout} className="space-y-6">

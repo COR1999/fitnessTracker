@@ -42,7 +42,12 @@ export default {
           '@apply w-full mx-auto': {},
         },
         '.chart-responsive': {
-          '@apply w-full h-80 sm:h-88 md:h-96 lg:h-116': {},
+          '@apply w-full overflow-hidden': {},
+          'height': '400px',
+          '@media (max-width: 768px)': {
+            'height': '300px',
+            'padding': '0',
+          },
         },
         
         // Button utilities
@@ -84,6 +89,26 @@ export default {
         },
         '.text-subtitle': {
           '@apply text-xl text-gray-400 max-w-2xl mx-auto': {},
+        },
+        
+        // Layout utilities
+        '.loading-container': {
+          '@apply flex items-center justify-center h-64': {},
+        },
+        '.loading-spinner': {
+          '@apply animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600': {},
+        },
+        '.loading-text': {
+          '@apply ml-3 text-gray-600': {},
+        },
+        '.center-form': {
+          '@apply mb-8 flex justify-center': {},
+        },
+        '.min-height-120': {
+          'min-height': '120px',
+        },
+        '.min-height-400': {
+          'min-height': '400px',
         },
       }
       

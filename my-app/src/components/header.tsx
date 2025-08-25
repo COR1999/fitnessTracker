@@ -1,6 +1,6 @@
 const PageHead = () => { 
   return(
-      <header className="text-center mb-6" style={{minHeight: '120px'}}>
+      <header className="text-center mb-6 min-height-120">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3">
             Fitness Tracker
           </h1>

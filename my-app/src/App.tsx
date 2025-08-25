@@ -23,11 +23,11 @@ function App() {
 
           {/* Chart Section */}
           <Suspense fallback={
-            <div className="card" style={{padding: '1rem', minHeight: '400px'}}>
+            <div className="card card-content min-height-400">
               <h2 className="heading-secondary mb-4">Progress Chart</h2>
-              <div className="flex items-center justify-center h-64">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
-                <span className="ml-3 text-gray-600">Loading chart...</span>
+              <div className="loading-container">
+                <div className="loading-spinner"></div>
+                <span className="loading-text">Loading chart...</span>
               </div>
             </div>
           }>
