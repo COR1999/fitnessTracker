@@ -22,7 +22,7 @@ const StatsOverview = () => {
         <div className="stat-card stat-card-green">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-green-700 font-semibold uppercase tracking-wide">This Week</p>
+              <p className="text-sm text-green-700 font-semibold uppercase tracking-wide">Date Range</p>
               <p className="text-3xl font-bold text-green-900 mt-2">{stats.thisWeekSessions}</p>
             </div>
             <div className="text-3xl">📅</div>
@@ -31,7 +31,7 @@ const StatsOverview = () => {
         <div className="stat-card stat-card-purple">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-purple-700 font-semibold uppercase tracking-wide">Best Day</p>
+              <p className="text-sm text-purple-700 font-semibold uppercase tracking-wide">Highest Calories</p>
               <p className="text-3xl font-bold text-purple-900 mt-2">{getBestDay()}cal</p>
             </div>
               <div className="text-3xl">🔥</div>

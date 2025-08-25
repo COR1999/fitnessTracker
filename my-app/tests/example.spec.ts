@@ -13,7 +13,7 @@ test.describe("Home page", () =>{
 
     // Check title has loaded
     await expect(page).toHaveTitle("Fitness Tracker");
-    // Check the Wellcome text has loaded
+    // Check the Welcome text has loaded
     await page.getByText("Welcome to Your Fitness Journey");
   })
 

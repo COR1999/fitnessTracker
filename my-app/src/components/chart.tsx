@@ -5,10 +5,10 @@ import { useMobile } from '../hooks/checkIsMobile.ts';
 import { useFormatData } from '../hooks/formatChart.ts';
 
 const Chart = () => {
-  // Check if its mobile
+  // Check if it's mobile
   let isMobile = useMobile();
 
-  // Get the formatted Data 
+  // Get the formatted data 
   const { dates, calories, durationMinutes } = useFormatData();
   
   // Get chart options from external config

@@ -17,7 +17,7 @@ export const useStats = (
     const dateStart = new Date(startDate);
     const dateEnd = new Date(endDate);
     
-    // Calculate this week's sessions
+    // Calculate sessions within the specified date range
     const weekStart = dateStart;
     const weekEnd = dateEnd;
   
@@ -42,7 +42,7 @@ export const numberOfObjects = () => {
 }
 
 export const getBestDay = () =>{
-  // Find the best day (highest calories)
+  // Get the highest calorie count from all workouts
   const bestDay = exerciseData.reduce((best, current) => {
     return current.calories > best.calories ? current : best
   }, exerciseData[0])?.calories || 0

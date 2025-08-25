@@ -20,7 +20,7 @@ export const useFormatData = () => {
       calories,
       durationMinutes
     };
-  }, []); // Empty dependency array since exerciseData is imported
+  }, []); // No dependencies needed since exerciseData is a static import
 
   return formattedData;
 }

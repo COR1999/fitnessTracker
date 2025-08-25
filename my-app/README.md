@@ -114,3 +114,5 @@ npm run dev
 
 
 Future inhancments use "if data wasnt stored locally use "use state" to get data from local storage
+
+Add text compression to optimaise performance
