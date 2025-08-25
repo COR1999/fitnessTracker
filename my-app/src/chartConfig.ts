@@ -35,7 +35,9 @@ export const getChartOptions = (
     labels: {
       style: {
         color: chartColors.secondary
-      }
+      },
+      rotation: isMobile ? -45 : 0,
+      step: isMobile ? Math.max(1, Math.floor(dates.length / 5)) : 1
     }
   },
   yAxis: {

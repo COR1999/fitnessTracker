@@ -50,11 +50,6 @@ export default {
         },
         '.chart-responsive': {
           '@apply w-full overflow-hidden': {},
-          'height': '400px',
-          '@media (max-width: 768px)': {
-            'height': '300px',
-            'padding': '0',
-          },
         },
         
         // Button utilities

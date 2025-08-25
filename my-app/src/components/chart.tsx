@@ -25,7 +25,6 @@ const Chart = () => {
               style: { 
                 width: '100%', 
                 height: '100%',
-                minHeight: isMobile ? '300px' : '400px'
               } 
             }}
           />
